@@ -4,11 +4,11 @@ import { Header } from "./Header"
 
 export const Layout = () => {
     return (
-        <div>
+        <>
             {/* <Container  maxWidth="lg"> */}
                 <Header />
                 <Footer />
             {/* </Container> */}
-        </div>
+        </>
     )
 }

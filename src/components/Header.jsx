@@ -93,6 +93,7 @@ export const Header = () => {
                     <nav>
                         {navItems.map((item) => (
                             <Link
+                                key={item.title}
                                 variant="button"
                                 color="primary.main"
                                 href={item.url}

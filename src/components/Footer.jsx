@@ -58,7 +58,7 @@ export const Footer = () => {
             }}
         >
             <Grid
-                direction="row"
+                // direction="row"
                 justifyContent="space-evenly"
                 textAlign="center"
                 maxWidth="xl"
