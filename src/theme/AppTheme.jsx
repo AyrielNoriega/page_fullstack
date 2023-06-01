@@ -7,7 +7,7 @@ import { blueTheme } from "./";
 export const AppTheme = ({children}) => {
     return (
         <ThemeProvider theme={blueTheme}>
-            <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
+            <GlobalStyles styles={{ ul: { margin: 0, padding: 0 } }} />
             <CssBaseline />
             {children}
         </ThemeProvider>

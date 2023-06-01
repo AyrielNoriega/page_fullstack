@@ -1,14 +1,13 @@
-import { Container } from "@mui/material"
-import { Footer } from "./Footer"
-import { Header } from "./Header"
+import { Footer } from "./Footer";
+import { Header } from "./Header";
+import { Outlet } from "react-router-dom";
 
 export const Layout = () => {
     return (
         <>
-            {/* <Container  maxWidth="lg"> */}
-                <Header />
-                <Footer />
-            {/* </Container> */}
+            <Header />
+            <Outlet />
+            <Footer />
         </>
     )
 }

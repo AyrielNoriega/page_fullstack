@@ -50,7 +50,7 @@ export const Footer = () => {
                 pb: 8,
                 border: '0px', 
                 // py: [3, 6],
-                position: 'fixed',
+                // position: 'fixed',
                 bottom: 0,
                 left: 0,
                 right: 0,
@@ -102,11 +102,15 @@ export const Footer = () => {
                         </Typography>
                         <ul>
                             {footer.description.map((item) => (
-                                <li key={item}>
+                                <Typography
+                                    component="li"
+                                    key={item}
+                                    sx={{ listStyle: 'none' }}
+                                >
                                     <Link href="#" variant="subtitle1" color="text.primary" style={{ textDecoration: 'none',  fontWeight: 300}}>
                                         {item}
                                     </Link>
-                                </li>
+                                </Typography>
                             ))}
                         </ul>
                     </Grid>
