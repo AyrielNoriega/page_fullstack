@@ -103,58 +103,8 @@ export const Header = () => {
 
                         ))}
                         
-                        {/* <Link
-                            variant="button"
-                            color="text.primary"
-                            href="#"
-                            sx={{ my: 1, mx: 1.5, textDecoration: 'none', ':hover': { color: 'primary.main2'}, }}
-                        >
-                            FINAL SOLUTIONS
-                        </Link>
-                        <Link
-                            variant="button"
-                            color="text.primary"
-                            href="#"
-                            sx={{ my: 1, mx: 1.5, textDecoration: 'none', ':hover': { color: 'primary.main2'}, }}
-                        >
-                            ABOUT US
-                        </Link>
-                        <Link
-                            variant="button"
-                            color="text.primary"
-                            href="#"
-                            sx={{ my: 1, mx: 1.5, textDecoration: 'none', ':hover': { color: 'primary.main2'}, }}
-                        >
-                            FAQs
-                        </Link>
-                        <Link
-                            variant="button"
-                            color="text.primary"
-                            href="#"
-                            sx={{ my: 1, mx: 1.5, textDecoration: 'none', ':hover': { color: 'primary.main2'}, }}
-                        >
-                            REFERRALS
-                        </Link>
-                        <Link
-                            variant="button"
-                            color="text.primary"
-                            href="#"
-                            sx={{ my: 1, mx: 1.5, textDecoration: 'none', ':hover': { color: 'primary.main2'}, }}
-                        >
-                            GET STARTED
-                        </Link>
-                        <Link
-                            variant="button"
-                            color="text.primary"
-                            href="#"
-                            sx={{ my: 1, mx: 1.5, textDecoration: 'none', ':hover': { color: 'primary.main2'}, }}
-                        >
-                            CONTACT US
-                        </Link> */}
                     </nav>
-                        {/* <Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
-                            Login
-                        </Button> */}
+
                 </Toolbar>
             </Container>
         </AppBar> 

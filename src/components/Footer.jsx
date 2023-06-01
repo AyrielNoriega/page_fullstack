@@ -112,7 +112,6 @@ export const Footer = () => {
                     </Grid>
                 ))}
             </Grid>
-            {/* <Copyright sx={{ mt: 5 }} /> */}
         </Grid>
     )
 }
