@@ -7,7 +7,7 @@ export const Form = () => {
                 <Grid item xs={12}>
                     <TextField
                         required
-                        id="names"
+                        id="    "
                         name="names"
                         label="Names"
                         fullWidth
@@ -22,7 +22,7 @@ export const Form = () => {
                     name="company"
                     label="Company name"
                     fullWidth
-                    autoComplete="company-name  "
+                    autoComplete="organization"
                     variant="standard"
                     />
                 </Grid>
@@ -33,7 +33,7 @@ export const Form = () => {
                         name="phone_number"
                         label="Phone number"
                         fullWidth
-                        autoComplete="phone_number"
+                        autoComplete="tel"
                         variant="standard"
                     />
                 </Grid>
@@ -43,7 +43,7 @@ export const Form = () => {
                         name="company_email"
                         label="Company email"
                         fullWidth
-                        autoComplete="company_email"
+                        autoComplete="email"
                         variant="standard"
                     />
                 </Grid>
@@ -73,7 +73,6 @@ export const Form = () => {
                     name="refered"
                     label="Refered"
                     fullWidth
-                    autoComplete="shipping address-level2"
                     variant="standard"
                     />
                 </Grid>
