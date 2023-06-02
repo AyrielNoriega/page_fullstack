@@ -1,7 +1,9 @@
-import { Box, Card, CardContent, CardMedia, Container, Divider, Grid, Typography } from "@mui/material";
+import { Box, Card, CardContent, CardMedia, Container, Divider, Grid, Paper, Stepper, Typography } from "@mui/material";
 import SavingsIcon from '@mui/icons-material/Savings';
 import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
+import Button from '@mui/material/Button';
+import { Form } from "./Form";
 
 const benefits = [
     {
@@ -58,21 +60,85 @@ export const Main = () => {
     return (
         <>
             <Grid
+                container
                 component="section"
+                px={5}
                 sx={{
                     backgroundImage: "url('https://www.trucksters.io/wp-content/uploads/2022/08/foto-articulo-3.png')",
                     backgroundRepeat: 'no-repeat',
                     backgroundPosition: 'center',
                     backgroundSize: 'cover',
-                    filter: 'brightness(60%)',
                     height: 'calc(100vh - 30px)',
                 }}
+            >
+                <Box style={{
+                        content: '',
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: 'calc(100vh - 30px)',
+                        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                    }}
+                />
+                <Grid
+                    item
+                    md={6}
+                    sx={{ zIndex: 1 }}
+                    
+                    display='flex'
+                    alignItems='center'
+                    paddingX={6}
+                >
+                    <Box>
+                        <Typography 
+                            textAlign='left'
+                            color="text.primary"
+                            component="h4"
+                            variant="h3"
+                            sx={{ alignItems: 'center' }}
+                            >
+                            Build By Truckers,<br /> For Truckers.
+                        </Typography>
+                        <Typography 
+                            textAlign='left'
+                            color="text.primary"
+                            component="p"
+                            sx={{ pt: 1 }}
+                        >
+                            Enim magna Lorem tempor deserunt fugiat sunt esse ex qui esse aute magna. 
+                            Ut id ex amet elit proident ullamco laboris reprehenderit laboris officia esse occaecat. 
+                            Laborum exercitation sit ad pariatur irure officia laboris labore laborum commodo ex. 
+                            Occaecat anim occaecat velit ex exercitation ea. Tempor consequat nulla culpa ipsum occaecat 
+                            quis qui proident anim officia aliqua officia velit. Nostrud ad ullamco consequat irure sunt 
+                            incididunt aliqua mollit esse. Elit commodo ullamco et aliqua aliquip.
+                        </Typography>
+                    </Box>
+                </Grid>
+                <Grid
+                    item
+                    md={6}
+                    sx={{zIndex: 1,}}
+                    justifyContent='center'
+                >
+                    <Paper
+                        variant="outlined"
+                        sx={{
+                            my: { xs: 3, md: 6 },
+                            p: { xs: 2, md: 3 },
+                            backgroundColor: 'rgba(255, 255, 255, 0.5)'
+                        }}
+                        >
 
-            >  
+                        <Form />
+                    </Paper>      
+                </Grid>
             </Grid>
+
+
             <Container
-            maxWidth="md"
-            component="main"
+                maxWidth="md"
+                component="main"
             >
                 <Grid component="section">  
                     <Grid sx={{ pt: 8, pb: 6 }}>

@@ -16,7 +16,7 @@ export const blueTheme = createTheme({
         },
         text: {
             primary: '#FFFFFF',
-            secondary: '#FFFFFF',
+            secondary: '#1A2B55',
         },
         follow: {
             primary: '#FFD700',
