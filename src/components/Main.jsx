@@ -56,180 +56,195 @@ const section1 = [
 
 export const Main = () => {
     return (
-        <Container
+        <>
+            <Grid
+                component="section"
+                sx={{
+                    backgroundImage: "url('https://www.trucksters.io/wp-content/uploads/2022/08/foto-articulo-3.png')",
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover',
+                    filter: 'brightness(60%)',
+                    height: 'calc(100vh - 30px)',
+                }}
+
+            >  
+            </Grid>
+            <Container
             maxWidth="md"
             component="main"
-        >
-            <Grid component="section">  
-                <Grid sx={{ pt: 8, pb: 6 }}>
-                    <Typography
-                        component="h3"
-                        variant="h5"
-                        align="center"
-                        color="primary.main"
-                        gutterBottom
-                        sx={{
-                            fontWeight: 700,
-                        }}
-                    >
-                        The benefits of factoring with FactorTek
-                    </Typography>
-                    <Divider />
-                    <Typography  align="center" color="primary.main" component="p" sx={{ pt: 1 }}>
-                        Get an advance on your autstanding invoices. The cash flow you need, when yout need it.
-                    </Typography>
-                </Grid>                      
-                <Grid container spacing={5} alignItems="flex-end">
-                     {section1  .map((item) => (
-                        <Grid
-                            item
-                            key={item.title}
-                            xs={12}
-                            sm={6}
-                            md={6}
+            >
+                <Grid component="section">  
+                    <Grid sx={{ pt: 8, pb: 6 }}>
+                        <Typography
+                            component="h3"
+                            variant="h5"
+                            align="center"
+                            color="primary.main"
+                            gutterBottom
+                            sx={{
+                                fontWeight: 700,
+                            }}
                         >
-                            <Card container="true" sx={{ display: 'flex', flexDirection: 'row' }}>
-                                <Grid
-                                    item
-                                    xs={12}
-                                    sm={12}
-                                    md={6}
-                                    sx={{
-                                        // display: 'flex',
-                                        justifyContent: 'center',
-                                        // alignItems: 'baseline',
-                                        // height: '100%',
-                                        mt: 2,
-                                        display: { xs: 'none', sm: 'none', md: 'block' }
-                                    }}
+                            The benefits of factoring with FactorTek
+                        </Typography>
+                        <Divider />
+                        <Typography  align="center" color="primary.main" component="p" sx={{ pt: 1 }}>
+                            Get an advance on your autstanding invoices. The cash flow you need, when yout need it.
+                        </Typography>
+                    </Grid>                      
+                    <Grid container spacing={5} alignItems="flex-end">
+                        {section1  .map((item) => (
+                            <Grid
+                                item
+                                key={item.title}
+                                xs={12}
+                                sm={6}
+                                md={6}
+                            >
+                                <Card container="true" sx={{ display: 'flex', flexDirection: 'row' }}>
+                                    <Grid
+                                        item
+                                        xs={12}
+                                        sm={12}
+                                        md={6}
+                                        sx={{
+                                            // display: 'flex',
+                                            justifyContent: 'center',
+                                            // alignItems: 'baseline',
+                                            // height: '100%',
+                                            mt: 2,
+                                            display: { xs: 'none', sm: 'none', md: 'block' }
+                                        }}
+                                    >
+                                        { item.icon == 'uno' && <SavingsIcon sx={{ color: 'primary.main', fontSize: 100 }} />}
+                                        { item.icon == 'dos' && <CheckBoxIcon sx={{ color: 'primary.main', fontSize: 100 }} />}
+                                    </Grid>
+                                    <Grid
+                                        item
+                                        xs={12}
+                                        sm={12}
+                                        md={6} 
+                                        justifyContent='center'
+                                        sx={{
+                                            display: 'flex',
+                                            flexDirection: 'row'
+                                        }} 
+                                    >
+                                        <CardContent>
+                                            <Typography
+                                                component="h3"
+                                                variant="subtitle"
+                                                align="center"
+                                                key={item.title}
+                                                sx={{  color: 'primary.main', pb: 2,  justifyContent: 'left' }}
+                                            >
+                                                {item.title}
+                                            </Typography>
+
+                                            <ul >
+                                                {item.description.map((line) => (
+                                                    <Typography
+                                                        component="li"
+                                                        variant="subtitle1"
+                                                        align="left"
+                                                        key={line}
+                                                        sx={{  color: 'primary.main' }}
+                                                    >
+                                                        {line}
+                                                    </Typography>
+                                                ))}
+                                            </ul>
+                                        </CardContent>
+                                    </Grid>
+                                </Card>
+                            </Grid>
+                        ))}
+                    </Grid>
+                </Grid>
+
+                <Grid component="section">                        
+                    <Grid sx={{ pt: 8, pb: 6, mt: 5 }}>
+                        <Typography
+                            component="h3"
+                            variant="h5"
+                            align="center"
+                            color="primary.main"
+                            gutterBottom
+                            sx={{
+                                fontWeight: 700,
+                            }}
+                            >
+                            The benefits of factoring with FactorTek
+                        </Typography>
+                        <Divider />
+                        <Typography  align="center" color="primary.main" component="p" sx={{ pt: 1 }}>
+                            Get an advance on your autstanding invoices. The cash flow you need, when yout need it.
+                        </Typography>
+                    </Grid>
+                    <Grid
+                        container
+                        spacing={5}
+                        alignItems="flex-end"
+                        sx={{ pb: 6 }}
+                    >
+                        {benefits.map((item) => (
+                            <Grid
+                                item
+                                key={item.title}
+                                xs={12}
+                                sm={6}
+                                md={4}
                                 >
-                                    { item.icon == 'uno' && <SavingsIcon sx={{ color: 'primary.main', fontSize: 100 }} />}
-                                    { item.icon == 'dos' && <CheckBoxIcon sx={{ color: 'primary.main', fontSize: 100 }} />}
-                                </Grid>
-                                <Grid
-                                    item
-                                    xs={12}
-                                    sm={12}
-                                    md={6} 
-                                    justifyContent='center'
-                                    sx={{
-                                        display: 'flex',
-                                        flexDirection: 'row'
-                                    }} 
-                                >
+                                <Card>
+                                    <CardMedia
+                                            component="img"
+                                            alt={item.title}
+                                            height="140"
+                                            image={item.image}
+                                    />
                                     <CardContent>
+                                        <Box
+                                            sx={{
+                                                display: 'flex',
+                                                justifyContent: 'center',
+                                                alignItems: 'baseline',
+                                                mb: 2,
+                                            }}
+                                        >
+                                            { item.icon == 'cash' && <SavingsIcon sx={{ color: 'primary.main' }} />}
+                                            { item.icon == 'forget' && <CheckBoxIcon sx={{ color: 'primary.main' }} />}
+                                            { item.icon == 'debt' && <CurrencyExchangeIcon   sx={{ color: 'primary.main' }} />}
+                                        </Box>
                                         <Typography
                                             component="h3"
                                             variant="subtitle"
                                             align="center"
                                             key={item.title}
-                                            sx={{  color: 'primary.main', pb: 2,  justifyContent: 'left' }}
+                                            sx={{  color: 'primary.main', pb: 2 }}
                                         >
                                             {item.title}
                                         </Typography>
-
-                                        <ul >
+                                        <ul>
                                             {item.description.map((line) => (
-                                                <Typography
-                                                    component="li"
-                                                    variant="subtitle1"
-                                                    align="left"
-                                                    key={line}
-                                                    sx={{  color: 'primary.main' }}
-                                                >
-                                                    {line}
-                                                </Typography>
+                                            <Typography
+                                                component="li"
+                                                variant="subtitle1"
+                                                align="center"
+                                                key={line}
+                                                sx={{  color: 'primary.main', listStyle: 'none' }}
+                                            >
+                                                {line}
+                                            </Typography>
                                             ))}
                                         </ul>
                                     </CardContent>
-                                </Grid>
-                            </Card>
-                        </Grid>
-                    ))}
-                </Grid>
-            </Grid>
-
-            <Grid component="section">                        
-                <Grid sx={{ pt: 8, pb: 6, mt: 5 }}>
-                    <Typography
-                        component="h3"
-                        variant="h5"
-                        align="center"
-                        color="primary.main"
-                        gutterBottom
-                        sx={{
-                            fontWeight: 700,
-                        }}
-                        >
-                        The benefits of factoring with FactorTek
-                    </Typography>
-                    <Divider />
-                    <Typography  align="center" color="primary.main" component="p" sx={{ pt: 1 }}>
-                        Get an advance on your autstanding invoices. The cash flow you need, when yout need it.
-                    </Typography>
-                </Grid>
-                <Grid
-                    container
-                    spacing={5}
-                    alignItems="flex-end"
-                    sx={{ pb: 6 }}
-                >
-                    {benefits.map((item) => (
-                        <Grid
-                            item
-                            key={item.title}
-                            xs={12}
-                            sm={6}
-                            md={4}
-                            >
-                            <Card>
-                                <CardMedia
-                                        component="img"
-                                        alt={item.title}
-                                        height="140"
-                                        image={item.image}
-                                />
-                                <CardContent>
-                                    <Box
-                                        sx={{
-                                            display: 'flex',
-                                            justifyContent: 'center',
-                                            alignItems: 'baseline',
-                                            mb: 2,
-                                        }}
-                                    >
-                                        { item.icon == 'cash' && <SavingsIcon sx={{ color: 'primary.main' }} />}
-                                        { item.icon == 'forget' && <CheckBoxIcon sx={{ color: 'primary.main' }} />}
-                                        { item.icon == 'debt' && <CurrencyExchangeIcon   sx={{ color: 'primary.main' }} />}
-                                    </Box>
-                                    <Typography
-                                        component="h3"
-                                        variant="subtitle"
-                                        align="center"
-                                        key={item.title}
-                                        sx={{  color: 'primary.main', pb: 2 }}
-                                    >
-                                        {item.title}
-                                    </Typography>
-                                    <ul>
-                                        {item.description.map((line) => (
-                                        <Typography
-                                            component="li"
-                                            variant="subtitle1"
-                                            align="center"
-                                            key={line}
-                                            sx={{  color: 'primary.main', listStyle: 'none' }}
-                                        >
-                                            {line}
-                                        </Typography>
-                                        ))}
-                                    </ul>
-                                </CardContent>
-                            </Card>
-                        </Grid>
-                    ))}
-                </Grid>
-            </Grid>   
-        </Container>
+                                </Card>
+                            </Grid>
+                        ))}
+                    </Grid>
+                </Grid>   
+            </Container>
+        </>
     )
 }

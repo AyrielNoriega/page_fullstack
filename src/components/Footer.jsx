@@ -43,7 +43,6 @@ const footers = [
 export const Footer = () => {
     return (
         <Grid   
-            maxWidth="xl"
             component="footer"
             sx={{
                 borderTop: (theme) => `1px solid ${theme.palette.divider}`,
@@ -61,7 +60,6 @@ export const Footer = () => {
                 // direction="row"
                 justifyContent="space-evenly"
                 textAlign="center"
-                maxWidth="xl"
                 py={1}
                 sx={{
                     width: '100%',
