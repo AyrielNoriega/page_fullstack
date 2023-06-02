@@ -1,8 +1,7 @@
-import { Box, Card, CardContent, CardMedia, Container, Divider, Grid, Paper, Stepper, Typography } from "@mui/material";
+import { Box, Card, CardContent, CardMedia, Container, Divider, Grid, Paper, Typography } from "@mui/material";
 import SavingsIcon from '@mui/icons-material/Savings';
 import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
-import Button from '@mui/material/Button';
 import { Form } from "./Form";
 
 const benefits = [
@@ -69,6 +68,7 @@ export const Main = () => {
                     backgroundPosition: 'center',
                     backgroundSize: 'cover',
                     height: 'calc(100vh - 30px)',
+                    marginTop: '90px',
                 }}
             >
                 <Box style={{
@@ -79,39 +79,43 @@ export const Main = () => {
                         width: '100%',
                         height: 'calc(100vh - 30px)',
                         backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                        marginTop: '90px',
                     }}
                 />
                 <Grid
                     item
                     md={6}
                     sx={{ zIndex: 1 }}
-                    
                     display='flex'
                     alignItems='center'
                     paddingX={6}
                 >
-                    <Box>
-                        <Typography 
+                    <Box
+                        sx={{
+                            display: { xs: 'none', sm: 'none', md: 'block' }
+                        }}
+                    >
+                        <Typography
                             textAlign='left'
                             color="text.primary"
                             component="h4"
                             variant="h3"
                             sx={{ alignItems: 'center' }}
-                            >
+                        >
                             Build By Truckers,<br /> For Truckers.
                         </Typography>
                         <Typography 
                             textAlign='left'
                             color="text.primary"
                             component="p"
-                            sx={{ pt: 1 }}
+                            sx={{
+                                pt: 1,
+                            }}
                         >
                             Enim magna Lorem tempor deserunt fugiat sunt esse ex qui esse aute magna. 
                             Ut id ex amet elit proident ullamco laboris reprehenderit laboris officia esse occaecat. 
                             Laborum exercitation sit ad pariatur irure officia laboris labore laborum commodo ex. 
-                            Occaecat anim occaecat velit ex exercitation ea. Tempor consequat nulla culpa ipsum occaecat 
-                            quis qui proident anim officia aliqua officia velit. Nostrud ad ullamco consequat irure sunt 
-                            incididunt aliqua mollit esse. Elit commodo ullamco et aliqua aliquip.
+                            Occaecat anim occaecat velit ex exercitation ea.
                         </Typography>
                     </Box>
                 </Grid>
@@ -134,7 +138,6 @@ export const Main = () => {
                     </Paper>      
                 </Grid>
             </Grid>
-
 
             <Container
                 maxWidth="md"
