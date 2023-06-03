@@ -2,7 +2,7 @@
 
 Esta es una aplicación desarrollada en JavaScript utilizando React.js. La vista principal de la aplicación incluye un formulario el cual esta diseñado para enviar los datos a través de una  API para su procesamiento y almacenamiento.
 
-Actualmente, solo la vista principal es funcional, lo que significa que los botones del menu (exeptuando el HOME) no tienen funcionalidad implementada en este momento.
+Actualmente, solo la vista principal es funcional, lo que significa que los botones del menu (exceptuando el HOME) no tienen funcionalidad implementada en este momento.
 
 ## Requisitos Previos
 
@@ -28,7 +28,7 @@ Sigue estos pasos para instalar y configurar el proyecto:
    
 2. Navega hasta el directorio del proyecto:
     ```bash
-    cd nombre-del-proyecto
+    cd page_fullstack
 
 
 3. Instala las dependencias del proyecto utilizando npm o yarn:
@@ -73,7 +73,7 @@ La aplicación envía los datos del formulario a través de una API desarrollada
     ```bash
     php artisan serve
     
-Si utilizas XAMPP, inicia apache y mySql
+Si utilizas XAMPP, inicia apache y mySQL
 
 7. Puedes ejecutar los test:
     ```bash
