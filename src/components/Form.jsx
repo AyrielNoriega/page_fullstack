@@ -1,4 +1,4 @@
-import { Button, FormControlLabel, FormLabel, Grid, Link, Radio, TextField } from '@mui/material';
+import { Button, FormControlLabel, FormLabel, Grid, Link, Radio, RadioGroup, TextField } from '@mui/material';
 import { Link as LinkRouter } from "react-router-dom";
 export const Form = () => {
     return (
@@ -17,13 +17,13 @@ export const Form = () => {
                 </Grid>
                 <Grid item xs={12}>
                     <TextField
-                    required
-                    id="company"
-                    name="company"
-                    label="Company name"
-                    fullWidth
-                    autoComplete="organization"
-                    variant="standard"
+                        required
+                        id="company"
+                        name="company"
+                        label="Company name"
+                        fullWidth
+                        autoComplete="organization"
+                        variant="standard"
                     />
                 </Grid>
                 <Grid item xs={12} sm={6}>
@@ -51,29 +51,33 @@ export const Form = () => {
                     <FormLabel component="legend">
                         Solution Type
                     </FormLabel>
-                    <FormControlLabel
-                        control={<Radio color="primary" name="factory" value="yes" />}
-                        label="Factory"
-                        style={{
-                            color:'#1A2B55'
-                        }} 
-                    />
-                    <FormControlLabel
-                        control={<Radio color="primary" name="fuel_card" value="yes" />}
-                        label="Fuel card"
-                        style={{
-                            color:'#1A2B55'
-                        }} 
-                    />
+                    <RadioGroup
+                        row
+                        name="solution_type"
+                    >
+                        <FormControlLabel
+                            control={<Radio color="primary" name="factory" value="factory" />}
+                            label="Factory"
+                            style={{
+                                color:'#1A2B55'
+                            }} 
+                        />
+                        <FormControlLabel
+                            control={<Radio color="primary" name="fuel_card" value="fuel_card" />}
+                            label="Fuel card"
+                            style={{
+                                color:'#1A2B55'
+                            }} 
+                        />
+                    </RadioGroup>
                 </Grid>
                 <Grid item xs={12}>
                     <TextField
-                    required
-                    id="refered"
-                    name="refered"
-                    label="Refered"
-                    fullWidth
-                    variant="standard"
+                        id="refered"
+                        name="refered"
+                        label="Refered"
+                        fullWidth
+                        variant="standard"
                     />
                 </Grid>
                 <Grid item xs={12}>
