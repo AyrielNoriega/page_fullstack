@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Link as LinkRouter } from "react-router-dom";
 import { Alert, AlertTitle, Button, FormControlLabel, FormLabel, Grid, Link, Radio, RadioGroup, Stack, TextField } from '@mui/material';
 import { storeContactsApi } from '../services/api';
 
@@ -17,6 +16,7 @@ export const Form = () => {
     });
 
     const [showAlert, setShowAlert] = useState(false);
+    const [messageAlert, setMessageAlert] = useState('');
 
     const handleChange = (event) => {
         setFormData({
@@ -40,10 +40,13 @@ export const Form = () => {
                 if (response.status == 201) {
                     setShowAlert(true);
 
+                    setMessageAlert(response.data.message);
+
+                    resetForm();
+
                     setTimeout(() => {
                         setShowAlert(false);
                     }, 5000);
-
                     
                 }
             })
@@ -53,18 +56,31 @@ export const Form = () => {
             });
     };
 
+    const resetForm = () => {
+        setFormData({
+            names: '',
+            company: '',
+            phone_number: '',
+            company_email: '',
+            refered: '',
+            solution_type: '',
+            comments: '',
+        });
+    };
+
     return (
         <form onSubmit={handleSubmit}>
             <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <TextField
                         required
-                        id="    "
+                        id="names"
                         name="names"
                         label="Names"
                         fullWidth
                         autoComplete="given-name"
                         variant="standard"
+                        value={formData.names}
                         onChange={handleChange}
                     />
                 </Grid>
@@ -77,6 +93,7 @@ export const Form = () => {
                         fullWidth
                         autoComplete="organization"
                         variant="standard"
+                        value={formData.company}
                         onChange={handleChange}
                     />
                 </Grid>
@@ -89,6 +106,7 @@ export const Form = () => {
                         fullWidth
                         autoComplete="tel"
                         variant="standard"
+                        value={formData.phone_number}
                         onChange={handleChange}
                     />
                 </Grid>
@@ -100,6 +118,7 @@ export const Form = () => {
                         fullWidth
                         autoComplete="email"
                         variant="standard"
+                        value={formData.company_email}
                         onChange={handleChange}
                     />
                 </Grid>
@@ -111,6 +130,7 @@ export const Form = () => {
                         row
                         id="solution_type"
                         name="solution_type"
+                        value={formData.solution_type}
                         onChange={handleChange}
                     >
                         <FormControlLabel
@@ -138,6 +158,7 @@ export const Form = () => {
                         label="Refered"
                         fullWidth
                         variant="standard"
+                        value={formData.refered}
                         onChange={handleChange}
                     />
                 </Grid>
@@ -148,6 +169,7 @@ export const Form = () => {
                         label="Additional comments"
                         fullWidth
                         variant="standard"
+                        value={formData.comments}
                         onChange={handleChange}
                     />
                 </Grid>
@@ -155,7 +177,7 @@ export const Form = () => {
                 <Grid container direction="row" justifyContent="end">
                     {showAlert && (
                         <Stack sx={{ width: '70%' }} spacing={2}>
-                            <Alert severity="success">This is a success alert — check it out!</Alert>
+                            <Alert severity="success">{messageAlert}</Alert>
                         </Stack>
                     )}
                     <Button
