@@ -2,7 +2,7 @@ import { Box, Card, CardContent, CardMedia, Container, Divider, Grid, Paper, Typ
 import SavingsIcon from '@mui/icons-material/Savings';
 import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
-import { Form } from "./Form";
+import { Form } from "../components/Form";
 
 const benefits = [
     {
