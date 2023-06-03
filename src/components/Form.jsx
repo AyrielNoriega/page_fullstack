@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Alert, AlertTitle, Button, FormControlLabel, FormLabel, Grid, Link, Radio, RadioGroup, Stack, TextField } from '@mui/material';
 import { storeContactsApi } from '../services/api';
-
+import SaveIcon from '@mui/icons-material/Save';
+import LoadingButton from '@mui/lab/LoadingButton';
 
 export const Form = () => {
 
@@ -17,6 +18,7 @@ export const Form = () => {
 
     const [showAlert, setShowAlert] = useState(false);
     const [messageAlert, setMessageAlert] = useState('');
+    const [loading, setLoading] = useState(false);
 
     const handleChange = (event) => {
         setFormData({
@@ -27,6 +29,8 @@ export const Form = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+
+        setLoading(true);
 
         if (formData.names.length < 3) return;
 
@@ -47,6 +51,8 @@ export const Form = () => {
                     setTimeout(() => {
                         setShowAlert(false);
                     }, 5000);
+
+                    setLoading(false);
                     
                 }
             })
@@ -180,13 +186,15 @@ export const Form = () => {
                             <Alert severity="success">{messageAlert}</Alert>
                         </Stack>
                     )}
-                    <Button
+                    <LoadingButton
+                        loading={loading}
+                        loadingIndicator="Sending…"
                         type="submit"
                         variant="contained"
                         sx={{ mt: 3, ml: showAlert ? 1 : 'auto', backgroundColor: 'follow.primary' }}
                     >
                         Submit
-                    </Button>
+                    </LoadingButton>
                 </Grid>
             </Grid>
         </form>
